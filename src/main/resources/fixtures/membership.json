@@ -1,0 +1,43 @@
+{
+ 
+  "teams" : [
+    {
+      "id" : "5988051e-b091-4c40-bc2d-da2e80d2a890",
+      "name" : "css"
+    },
+    {
+      "id" : "c4d6a835-b10e-4d73-94cc-93f3f74dcf32",
+      "name" : "est"
+    },
+    {
+      "id" : "272123d6-1c52-4d38-8c56-cdc332941bd4",
+      "name" : "ca"
+    }
+  ] ,
+  "memberships" : [
+    {
+      "subject" : "b3554525-d56c-44ea-8b47-d5d2d0438efb",
+      "team" : "5988051e-b091-4c40-bc2d-da2e80d2a890",
+      "role" : "ADMIN",
+      "status" : "ACTIVE"
+    },
+    {
+      "subject" : "dbba810b-aaba-484a-80e3-804664085c34",
+      "team" : "5988051e-b091-4c40-bc2d-da2e80d2a890",
+      "role" : "MEMBER",
+      "status" : "ACTIVE"
+    },
+    {
+      "subject" : "7794cb54-6043-40d0-a939-697536f8affe",
+      "team" : "c4d6a835-b10e-4d73-94cc-93f3f74dcf32",
+      "role" : "MEMBER",
+      "status" : "REMOVED"
+    },
+    {
+      "subject" : "73c4c170-31ce-4656-bdbc-d9b9b6f89ca5",
+      "team" : "272123d6-1c52-4d38-8c56-cdc332941bd4",
+      "role" : "MEMBER",
+      "status" : "ACTIVE"
+    }
+  ]
+}
