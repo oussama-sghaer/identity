@@ -1,3 +1,8 @@
 spring:
   application:
     name: identity
+app:
+  jwt:
+    issuer: https://identity-demo.com
+    audience: audience
+
