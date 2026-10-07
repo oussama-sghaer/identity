@@ -1,5 +1,6 @@
 package com.training.identity.config;
 
+import com.training.identity.config.domain.UserIdMappingConfiguration;
 import com.training.identity.domain.UserId;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.ObjectMapper;

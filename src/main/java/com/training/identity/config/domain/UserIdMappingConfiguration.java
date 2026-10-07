@@ -1,6 +1,6 @@
-package com.training.identity.config;
+package com.training.identity.config.domain;
 
-import com.training.identity.domain.TeamId;
+import com.training.identity.domain.UserId;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tools.jackson.core.JsonGenerator;
@@ -15,29 +15,29 @@ import tools.jackson.databind.module.SimpleModule;
 import java.util.UUID;
 
 @Configuration
-public class TeamIdMappingConfiguration {
+public class UserIdMappingConfiguration {
 
-    static class TeamIdSerializer extends ValueSerializer<TeamId> {
+    static class UserIdSerializer extends ValueSerializer<UserId> {
         @Override
-        public void serialize(TeamId value, JsonGenerator gen, SerializationContext ctxt) {
+        public void serialize(UserId value, JsonGenerator gen, SerializationContext ctxt) {
             gen.writeString(value.id().toString());
         }
     }
 
-    static class TeamIdDeserializer extends ValueDeserializer<TeamId> {
+    static class UserIdDeserializer extends ValueDeserializer<UserId> {
         @Override
-        public TeamId deserialize(JsonParser p, DeserializationContext ctxt) {
+        public UserId deserialize(JsonParser p, DeserializationContext ctxt) {
             String text = p.getText();
             var uuid = UUID.fromString(text);
-            return new TeamId(uuid);
+            return new UserId(uuid);
         }
     }
 
     @Bean
-    public JacksonModule teamIdJacksonModule() {
+    public JacksonModule userIdJacksonModule() {
         var module = new SimpleModule();
-        module.addDeserializer(TeamId.class, new TeamIdDeserializer());
-        module.addSerializer(TeamId.class, new TeamIdSerializer());
+        module.addDeserializer(UserId.class, new UserIdDeserializer());
+        module.addSerializer(UserId.class, new UserIdSerializer());
         return module;
     }
 }
